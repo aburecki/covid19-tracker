@@ -1,41 +1,41 @@
 <template>
 
-
-    <nav class="level container card">
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading is-medium">Cases</p>
-                <p class="title">
-                    <animated-number :value="statistic.cases" :formatValue="format"  :duration="1000" />
-                </p>
+    <section class="info-tiles my-4 container">
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">
+                        <animated-number :value="statistic.cases" :formatValue="format" :duration="1000" />
+                    </p>
+                    <p class="subtitle">Cases</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">
+                        <animated-number :value="statistic.deaths" :formatValue="format" :duration="1000" />
+                    </p>
+                    <p class="subtitle">Deaths</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">
+                        <animated-number :value="statistic.recovered" :formatValue="format" :duration="1000" />
+                    </p>
+                    <p class="subtitle">Recovered</p>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title">
+                        <animated-number :value="statistic.tests" :formatValue="format" :duration="1000" />
+                    </p>
+                    <p class="subtitle">Tests</p>
+                </article>
             </div>
         </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Deaths</p>
-                <p class="title">
-                    <animated-number :value="statistic.deaths" :formatValue="format"  :duration="1000" />
-                </p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Recovered</p>
-                <p class="title">
-                     <animated-number :value="statistic.recovered" :formatValue="format"  :duration="1000" />
-                </p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-                <p class="heading">Tests</p>
-                <p class="title">
-                    <animated-number :value="statistic.tests" :formatValue="format"  :duration="1000" />
-                </p>
-            </div>
-        </div>
-    </nav>
-
+    </section>
 
 
 </template>

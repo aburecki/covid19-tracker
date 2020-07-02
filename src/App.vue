@@ -1,50 +1,46 @@
 <template>
     <div id="app">
 
-        <section class="hero is-primary is-small is-bold">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head container">
-                <nav class="navbar">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <img src="../src/assets/thediplomat-2020-04-01.png" alt="Logo">
-                            </a>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                        </div>
-                        <div id="navbarMenuHeroA" class="navbar-menu">
-                            <div class="navbar-end">
+        <nav class="navbar container" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://bulma.io">
+                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                </a>
 
-                                <router-link class="navbar-item" to="/" exact >Home</router-link>
-
-                                <router-link class="navbar-item" to="/chart">Chart</router-link>
-
-                                <router-link class="navbar-item" to="/covid-info">Covid information</router-link>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
 
-            <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <router-link class="button" to="/" exact>Home</router-link>
+
+                            <router-link class="button" to="/chart">Chart</router-link>
+
+                            <router-link class="button" to="/covid-info">Covid information</router-link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+         <div class="hero-body">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                        COVID-19
+                    Poland COVID-19 Tracker
                     </h1>
                     <h2 class="subtitle">
-                        Vue Statistic App in Poland
+                    Vue Single Page Application showing actual COVIR-19 statistics in Poland 
                     </h2>
                 </div>
             </div>
 
-        </section>
+
         <Stats :statistic="statistic" />
         <router-view></router-view>
 
@@ -54,14 +50,14 @@
 
 <script>
     import Stats from "./components/Stats"
-   
+
     export default {
         name: "App",
         components: {
-            
+
             Stats,
-            
-            
+
+
         },
 
         data() {
@@ -72,7 +68,7 @@
                     recovered: 0,
                     tests: 0
                 },
-            faqs: []
+                faqs: []
             }
 
         },
@@ -87,8 +83,8 @@
                     this.statistic.tests = res.data.tests;
 
                 })
-            
-        
+
+
         }
 
     }
@@ -97,4 +93,7 @@
 
 <style>
     @import "~bulma/css/bulma.css";
+    .navbar {
+        border-bottom: 1px solid #e0dfdf;
+    }
 </style>

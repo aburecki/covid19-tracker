@@ -27,7 +27,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  linkActiveClass: 'is-active'
+  linkActiveClass: 'is-primary'
 })
 
 export default router
