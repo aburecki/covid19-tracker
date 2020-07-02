@@ -2,19 +2,24 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import CovidInforamtion from '../views/CovidInformation.vue'
 import ChartComponent from '../components/ChartComponent.vue'
-
+import Faq from '../components/Faq.vue'
 
 Vue.use(VueRouter)
 
   const routes = [
+     {
+       path: '/',
+       name: 'FaqComponent',
+       component: Faq
+     },
   {
     path: '/chart',
-    name: 'Home',
+    name: 'ChartComponent',
     component: ChartComponent
   },
   {
     path: '/covid-info',
-    name: 'test',
+    name: 'CovidInforamtion',
     component: CovidInforamtion
   },
 

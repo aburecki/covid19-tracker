@@ -47,22 +47,21 @@
         </section>
         <Stats :statistic="statistic" />
         <router-view></router-view>
-        <!-- <ChartComponent /> -->
+
 
     </div>
 </template>
 
 <script>
-    // import Navbar from "./components/Navbar"
     import Stats from "./components/Stats"
-    // import ChartComponent from "./components/ChartComponent"
-
+   
     export default {
         name: "App",
         components: {
-            // Navbar,
+            
             Stats,
-            // ChartComponent
+            
+            
         },
 
         data() {
@@ -72,7 +71,8 @@
                     deaths: 0,
                     recovered: 0,
                     tests: 0
-                }
+                },
+            faqs: []
             }
 
         },
@@ -87,6 +87,8 @@
                     this.statistic.tests = res.data.tests;
 
                 })
+            
+        
         }
 
     }
