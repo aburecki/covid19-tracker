@@ -1,5 +1,5 @@
 <template>
-    <section class="hero is-fullheight is-light is-bold">
+    <section class="hero is-light is-bold chart">
 
         <!-- <div id="chart" class=""> -->
             <apexchart type="area" height="100%" :options="chartOptions" :series="series"></apexchart>
@@ -118,7 +118,8 @@
 
 <style>
     .chart {
-        width: 70%;
+        height: 600px;
+        width: 90%;
         margin: 0 auto;
     }
 </style>

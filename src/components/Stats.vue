@@ -1,7 +1,7 @@
 <template>
 
 
-    <nav class="level container">
+    <nav class="level container card">
         <div class="level-item has-text-centered">
             <div>
                 <p class="heading is-medium">Cases</p>
