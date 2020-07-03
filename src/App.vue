@@ -30,20 +30,23 @@
             </div>
         </nav>
         <section class="hero is-danger is-bold">
-         <div class="hero-body ">
+            <div class="hero-body ">
                 <div class="container has-text-centered">
                     <h1 class="title">
-                    Poland COVID-19 Tracker
+                        Poland COVID-19 Tracker
                     </h1>
                     <h2 class="subtitle">
-                    Vue Single Page Application showing actual COVIR-19 statistics in Poland 
+                        Vue Single Page Application showing actual COVIR-19 statistics in Poland
                     </h2>
                 </div>
             </div>
-</section>
+        </section>
 
         <Stats :statistic="statistic" />
-        <router-view></router-view>
+ 
+        <transition name="slide" mode="out-in">
+            <router-view></router-view>
+        </transition>
 
 
     </div>
@@ -92,9 +95,22 @@
 </script>
 
 
-<style>
+<style scoped>
     @import "~bulma/css/bulma.css";
+
     .navbar {
         border-bottom: 1px solid #e0dfdf;
     }
+
+    .slide-enter-active,
+    .slide-leave-active {
+        transition: opacity 1s, transform 1s;
+    }
+
+    .slide-enter,
+    .slide-leave-to {
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+
 </style>
