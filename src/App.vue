@@ -23,13 +23,14 @@
 
                             <router-link class="button" to="/chart">Chart</router-link>
 
-                            <router-link class="button" to="/covid-info">Covid information</router-link>
+                            <router-link class="button" to="/covid-info">Covid Information</router-link>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-         <div class="hero-body">
+        <section class="hero is-danger is-bold">
+         <div class="hero-body ">
                 <div class="container has-text-centered">
                     <h1 class="title">
                     Poland COVID-19 Tracker
@@ -39,7 +40,7 @@
                     </h2>
                 </div>
             </div>
-
+</section>
 
         <Stats :statistic="statistic" />
         <router-view></router-view>
